@@ -213,7 +213,11 @@
 /* ════════════════════════════════════════
    RESPONSIVE
 ════════════════════════════════════════ */
-
+@media (max-width: 1728px) {
+  .hd__nav-link {
+    font-size: 1rem;
+  }
+}
 /* Desktop lớn > 1400px: giữ nguyên */
 
 /* Large Desktop: 1200px - 1400px */
@@ -222,13 +226,13 @@
     padding: 0 60px;
   }
   .hd__nav {
-    gap: 1rem;
+    gap: 2rem;
   }
   .hd__nav-link {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
   .hd__cta {
-    padding: 0.5rem 2rem;
+    padding: 0.75rem 2rem;
     font-size: 1rem;
   }
 }
@@ -237,6 +241,12 @@
 @media (max-width: 1200px) {
   .hd {
     padding: 0 40px;
+  }
+  .hd__nav {
+    gap: 1.5rem;
+  }
+  .hd__nav-link {
+    font-size: 0.8rem;
   }
   .hd__cta {
     padding: 0.5rem 1.25rem;

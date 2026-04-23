@@ -1,0 +1,9 @@
+.overviewBg {
+  width: 100%;
+  height: 100dvh;
+  background-color: #013938;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  flex-shrink: 0;
+}

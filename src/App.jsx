@@ -4,6 +4,8 @@ import PopUp from "./components/PopUp/PopUp";
 import Hero from "./components/Hero/Hero";
 import Footer from "./components/Footer/Footer";
 import FloatingButtons from "./components/FloatingButtons/FloatingButtons";
+import Overview from "./components/TongQuan/Overview";
+import OverviewBg from "./components/TongQuan/Overview-bg";
 function App() {
   const [showModal, setShowModal] = useState(false);
 
@@ -15,6 +17,11 @@ function App() {
       <FloatingButtons />
       <Header onOpenModal={openModal} />
       <Hero />
+      <Overview
+        logoImage="/images/logo-imperia.png"
+        titleImage="/images/overview-title.png"
+      />
+      <OverviewBg backgroundImage="/images/overview-bg.webp" />
       <Footer />
       <PopUp isOpen={showModal} onClose={closeModal} />
     </div>
