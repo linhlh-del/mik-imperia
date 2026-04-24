@@ -38,10 +38,13 @@ export default function ImperiaOverview() {
         {/* Video Embed Section */}
         <div className={styles.videoEmbed}>
           <div className={styles.video}>
-            <img
-              src="/images/imperia-overview.jpg"
-              alt="Imperia overview"
-              className={styles.videoImage}
+            <iframe
+              className={styles.videoIframe}
+              src="https://www.youtube.com/embed/tOFyH4R5pJ0"
+              title="Imperia overview video"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
             />
           </div>
         </div>

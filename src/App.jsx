@@ -10,6 +10,7 @@ import OverviewBg from "./components/TongQuan/Overview-bg";
 import GetInfor from "./components/Getinfor/GetInfor";
 import ThankYou from "./components/ThankYou";
 import ImperiaOverview from "./components/ImperiaOverview/ImperiaOverview";
+import MikGroupOverview from "./components/MikOverview/MikGroupOverview";
 
 function App() {
   const [showModal, setShowModal] = useState(false);
@@ -29,6 +30,7 @@ function App() {
       <OverviewBg backgroundImage="/images/overview-bg.webp" />
       <GetInfor />
       <ImperiaOverview />
+      <MikGroupOverview />
       <Footer />
       <PopUp isOpen={showModal} onClose={closeModal} />
     </div>
