@@ -1,0 +1,125 @@
+@import "https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap";
+
+.wrapper {
+  background-color: #fff;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
+    url("/images/bg-imperia-overview.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  flex-direction: column;
+  flex-shrink: 0;
+  align-items: center;
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  overflow: hidden;
+  border-top: 1px solid #07513e;
+  padding: 0 180px;
+  margin-bottom: 40px;
+}
+
+.container {
+  flex-direction: column;
+  flex-shrink: 0;
+  align-items: flex-start;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  gap: 2rem;
+}
+
+.textLeft {
+  flex-direction: column;
+  flex-shrink: 0;
+  align-items: center;
+  width: 100%;
+  padding: 40px 0;
+  padding-bottom: 0px;
+  display: flex;
+  overflow: hidden;
+}
+
+.content {
+  flex-direction: column;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+}
+
+.logo {
+  flex-direction: column;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  height: 240px;
+  padding: 0 80px;
+  display: flex;
+  overflow: hidden;
+}
+
+.logoImage {
+  width: 100%;
+  max-width: 20vh;
+  height: auto;
+  object-fit: contain;
+}
+
+.textDes {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0 180px;
+  display: flex;
+  overflow: hidden;
+}
+
+.paragraph {
+  color: #043b35;
+  text-align: justify;
+  letter-spacing: 0.96px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 180%;
+  flex: 1 0 0;
+  display: inline-block;
+}
+
+.videoEmbed {
+  flex-direction: column;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0 180px;
+  display: flex;
+  overflow: hidden;
+}
+
+.video {
+  background: #d3d3d3 center / contain no-repeat;
+  flex-direction: column;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  max-width: 100%;
+  display: flex;
+  overflow: hidden;
+}
+
+.videoImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

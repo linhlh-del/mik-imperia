@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
 import PopUp from "./components/PopUp/PopUp";
 import Hero from "./components/Hero/Hero";
@@ -6,13 +7,17 @@ import Footer from "./components/Footer/Footer";
 import FloatingButtons from "./components/FloatingButtons/FloatingButtons";
 import Overview from "./components/TongQuan/Overview";
 import OverviewBg from "./components/TongQuan/Overview-bg";
+import GetInfor from "./components/Getinfor/GetInfor";
+import ThankYou from "./components/ThankYou";
+import ImperiaOverview from "./components/ImperiaOverview/ImperiaOverview";
+
 function App() {
   const [showModal, setShowModal] = useState(false);
 
   const openModal = () => setShowModal(true);
   const closeModal = () => setShowModal(false);
 
-  return (
+  const HomePage = () => (
     <div style={{ width: "100%", overflow: "hidden" }}>
       <FloatingButtons />
       <Header onOpenModal={openModal} />
@@ -22,9 +27,18 @@ function App() {
         titleImage="/images/overview-title.png"
       />
       <OverviewBg backgroundImage="/images/overview-bg.webp" />
+      <GetInfor />
+      <ImperiaOverview />
       <Footer />
       <PopUp isOpen={showModal} onClose={closeModal} />
     </div>
+  );
+
+  return (
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/thank-you" element={<ThankYou />} />
+    </Routes>
   );
 }
 
