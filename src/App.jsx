@@ -12,7 +12,8 @@ import ThankYou from "./components/ThankYou";
 import ImperiaOverview from "./components/ImperiaOverview/ImperiaOverview";
 import MikGroupOverview from "./components/MikOverview/MikGroupOverview";
 import Position from "./components/Position/Position";
-
+import GetInforGreen from "./components/Getinfor_greeen/GetInforGreen";
+import TienIch from "./components/TienIch/TienIch";
 function App() {
   const [showModal, setShowModal] = useState(false);
 
@@ -33,6 +34,8 @@ function App() {
       <ImperiaOverview />
       <MikGroupOverview />
       <Position />
+      <GetInforGreen />
+      <TienIch />
       <Footer />
       <PopUp isOpen={showModal} onClose={closeModal} />
     </div>
