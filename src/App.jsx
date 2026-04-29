@@ -15,6 +15,7 @@ import Position from "./components/Position/Position";
 import GetInforGreen from "./components/Getinfor_greeen/GetInforGreen";
 import TienIch from "./components/TienIch/TienIch";
 import MatBang from "./components/MatBang/MatBang";
+import Layout from "./components/Layout/Layout";
 function App() {
   const [showModal, setShowModal] = useState(false);
 
@@ -38,6 +39,7 @@ function App() {
       <GetInforGreen />
       <TienIch />
       <MatBang />
+      <Layout />
       <Footer />
       <PopUp isOpen={showModal} onClose={closeModal} />
     </div>

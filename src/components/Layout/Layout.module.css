@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css?family=Mulish:500;700&display=swap");
+
+/* ========================
+   Section
+======================== */
+.layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 1226px;
+  padding: 40px 0;
+  overflow: hidden;
+}
+
+/* ========================
+   Container
+======================== */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  width: 1296px;
+  max-width: 100%;
+  padding: 40px 24px;
+}
+
+/* ========================
+   Header
+======================== */
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.title {
+  color: #013938;
+  text-align: center;
+  letter-spacing: 2.4px;
+  font-family: Mulish, sans-serif;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 145%;
+}
+
+.subtitle {
+  color: #013938;
+  text-align: center;
+  letter-spacing: 0.8px;
+  font-family: Mulish, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 145%;
+}
+
+/* ========================
+   DESKTOP — Image Wrapper
+======================== */
+.imageWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+/* Main image */
+.imageMain {
+  width: 100%;
+  height: 720px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.imgMain {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
+
+/* ========================
+   DESKTOP — Thumbnail Slider
+======================== */
+.sliderWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  overflow: hidden; /* clip the sliding track */
+}
+
+.sliderViewport {
+  width: 100%;
+  overflow: hidden;
+}
+
+.sliderTrack {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  width: 100%;
+  transition: transform 0.4s ease;
+}
+
+.thumbSlot {
+  flex: 0 0 auto;
+  display: flex;
+  width: 100%;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+
+.card {
+  width: 100%;
+  height: 170px;
+  overflow: hidden;
+  border: 2px solid transparent;
+  cursor: pointer;
+  padding: 0;
+  background: #f0f0f0;
+  transition:
+    border-color 0.2s,
+    opacity 0.2s;
+  box-sizing: border-box;
+}
+
+.card:hover {
+  opacity: 0.85;
+}
+
+.cardActive {
+  border-color: #013938;
+}
+
+.imgThumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* ========================
+   Dots (shared)
+======================== */
+.dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #c4c4c4;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition:
+    background 0.2s,
+    transform 0.2s;
+}
+
+.dotActive {
+  background: #013938;
+  transform: scale(1.4);
+}
+
+/* ========================
+   MOBILE — Unified Slider
+======================== */
+.mobileSlider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.mobileTrack {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #f0f0f0;
+}
+
+.mobileImg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
+
+/* ========================
+   Responsive — Tablet (≤ 1024px)
+======================== */
+@media (max-width: 1024px) {
+  .layout {
+    min-height: auto;
+  }
+
+  .title {
+    font-size: 44px;
+    letter-spacing: 1.6px;
+  }
+
+  .subtitle {
+    font-size: 17px;
+  }
+
+  .imageMain {
+    height: 480px;
+  }
+
+  .slideGroup {
+    gap: 12px;
+  }
+
+  .card {
+    height: 130px;
+  }
+}
+
+/* ========================
+   Responsive — Mobile L (≤ 768px)
+======================== */
+@media (max-width: 768px) {
+  .layout {
+    min-height: auto;
+    padding: 32px 0;
+  }
+
+  .container {
+    padding: 24px 16px;
+    gap: 24px;
+  }
+
+  .title {
+    font-size: 30px;
+    letter-spacing: 1px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+/* ========================
+   Responsive — Mobile S (≤ 480px)
+======================== */
+@media (max-width: 480px) {
+  .title {
+    font-size: 22px;
+  }
+
+  .subtitle {
+    font-size: 12px;
+  }
+}
