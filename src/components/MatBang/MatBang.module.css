@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css?family=Mulish:600&display=swap");
+
+/* ========================
+   Section
+======================== */
+.matBang {
+  background: #013938;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 1351px;
+  overflow: hidden;
+}
+
+/* ========================
+   Container
+======================== */
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 20px;
+  width: 1296px;
+  max-width: 100%;
+  padding: 40px 24px;
+}
+
+/* ========================
+   Header
+======================== */
+.header {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 132px;
+  gap: 16px;
+}
+
+.line {
+  background: #fff;
+  width: 560px;
+  max-width: 80%;
+  height: 0.5px;
+  flex-shrink: 0;
+}
+
+.title {
+  color: #fff;
+  text-align: center;
+  letter-spacing: 2.88px;
+  font-family: Mulish, sans-serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 145%;
+  display: inline-block;
+}
+
+/* ========================
+   Image Grid
+======================== */
+.imageGrid {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+/* ========================
+   Shared img style
+   object-fit: contain → hiện toàn bộ ảnh, không crop
+   background: #013938 → fill màu nền thay vì trắng
+======================== */
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ✅ fill đầy khung, không khoảng trắng */
+  object-position: center;
+  display: block;
+}
+
+/* ========================
+   Top — ảnh lớn
+======================== */
+.imageTop {
+  width: 100%;
+  height: 728px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+/* ========================
+   Bottom — 2 ảnh nhỏ
+======================== */
+.imageBottom {
+  display: flex;
+  flex-shrink: 0;
+  gap: 20px;
+  width: 100%;
+  height: 362px;
+}
+
+.imageBottomItem {
+  flex: 1 1 0;
+  height: 100%;
+  overflow: hidden;
+  min-width: 0; /* prevent flex overflow */
+}
+
+/* ========================
+   Responsive — Tablet (≤ 1024px)
+======================== */
+@media (max-width: 1024px) {
+  .matBang {
+    min-height: auto;
+  }
+
+  .title {
+    font-size: 36px;
+    letter-spacing: 1.8px;
+  }
+
+  .imageTop {
+    height: 480px;
+  }
+
+  .imageBottom {
+    height: auto;
+    flex-direction: column;
+  }
+
+  .imageBottomItem {
+    width: 100%;
+    height: 300px;
+    flex: unset;
+  }
+}
+
+/* ========================
+   Responsive — Mobile L (≤ 768px)
+======================== */
+@media (max-width: 768px) {
+  .container {
+    padding: 32px 16px;
+    gap: 16px;
+  }
+
+  .title {
+    font-size: 24px;
+    letter-spacing: 1px;
+  }
+
+  .line {
+    width: 80%;
+  }
+
+  .imageTop {
+    height: 320px;
+  }
+
+  .imageBottomItem {
+    height: 220px;
+  }
+}
+
+/* ========================
+   Responsive — Mobile S (≤ 480px)
+======================== */
+@media (max-width: 480px) {
+  .title {
+    font-size: 18px;
+    letter-spacing: 0.5px;
+  }
+
+  .imageTop {
+    height: 220px;
+  }
+
+  .imageBottomItem {
+    height: 160px;
+  }
+}

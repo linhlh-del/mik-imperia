@@ -14,6 +14,7 @@ import MikGroupOverview from "./components/MikOverview/MikGroupOverview";
 import Position from "./components/Position/Position";
 import GetInforGreen from "./components/Getinfor_greeen/GetInforGreen";
 import TienIch from "./components/TienIch/TienIch";
+import MatBang from "./components/MatBang/MatBang";
 function App() {
   const [showModal, setShowModal] = useState(false);
 
@@ -36,6 +37,7 @@ function App() {
       <Position />
       <GetInforGreen />
       <TienIch />
+      <MatBang />
       <Footer />
       <PopUp isOpen={showModal} onClose={closeModal} />
     </div>
